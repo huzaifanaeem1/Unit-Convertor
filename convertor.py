@@ -79,28 +79,26 @@ elif conversion_type == "Temperature":
         to_unit = st.selectbox("To", ["Celsius", "Fahrenheit", "Kelvin"])
 
 def length_conversion(value, from_unit, to_unit):
-length_units = {
-    'Meter': 1.0,
-    'Kilometer': 1000.0,
-    'Centimeter': 0.01,
-    'Millimeter': 0.001,
-    'Miles': 1609.344, 
-    'Yards': 0.9144,
-    'Inches': 0.0254,
-    'Feet': 0.3048,
-}
-
+    length_units = {
+        'Meter': 1.0,
+        'Kilometer': 1000.0,
+        'Centimeter': 0.01,
+        'Millimeter': 0.001,
+        'Miles': 1609.344,
+        'Yards': 0.9144,
+        'Inches': 0.0254,
+        'Feet': 0.3048,
+    }
     return (value / length_units[from_unit]) * length_units[to_unit]
 
 def weight_conversion(value, from_unit, to_unit):
-weight_units = {
-    'Kilogram': 1.0,
-    'Gram': 0.001,
-    'Milligram': 0.000001,
-    'Pounds': 0.45359237, 
-    'Ounces': 0.02834952, 
-}
-
+    weight_units = {
+        'Kilogram': 1.0,
+        'Gram': 0.001,
+        'Milligram': 0.000001,
+        'Pounds': 0.45359237,
+        'Ounces': 0.02834952,
+    }
     return (value / weight_units[from_unit]) * weight_units[to_unit]
 
 def temperature_conversion(value, from_unit, to_unit):
@@ -123,9 +121,3 @@ if st.button("🔄 Convert"):
     st.markdown(f"<div class='result-box'> {value} {from_unit} = {result:.4f} {to_unit} ✅</div>", unsafe_allow_html=True)
 
 st.markdown("<div class='footer'>🚀 Developed by <a href='https://www.linkedin.com/in/huzaifa-naeem-8949692b5/' target='_blank'>Huzaifa Naeem</a> 🌟</div>", unsafe_allow_html=True)
-
-
-
-
-
-
